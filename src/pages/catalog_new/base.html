@@ -1,0 +1,691 @@
+<div>
+<style>
+	/*Top Banner styles*/
+	.hero {
+    padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom:0;
+	}
+	.hero_intro {
+	padding-top:50px;
+	background-color: #F78F28;
+	background-image: url(https://cdns.tblsft.com/sites/default/files/hero-backgrounds/partner-viza-1920x400-2x_2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height:250px;
+	max-height:250px;
+	}
+	.hero_intro .hero {
+	padding-bottom:50px;
+	}
+	.hero_intro h1{
+	color:#fff !important;
+	font-family: 'Benton Sans Bold', 'Helvetica', 'Arial', 'sans-serif' !important;
+	}
+	.hero_tabs {
+	padding-bottom: 0;
+    background-color:#F5F5F5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+	.three-up{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: unset;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	.column {
+	float: left;
+	min-width: 390px;
+        max-width: 30%;
+	}
+	/*.column:nth-child(2){
+	margin-left:20px;
+	margin-right:20px;
+	}*/
+	@media screen and (max-width:600px){
+	.column:nth-child(2){
+	margin-left:0px;
+	margin-right:0px;
+	}
+	   }
+	.hidden_banner {
+		display: none !important;
+	}
+	.banner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Benton Sans Bold', 'Helvetica', 'Arial', 'sans-serif' !important;
+	padding:12px;
+	margin: 3px;
+	background-color:#fff;
+	max-height: 128px;
+	min-height:128px;
+	border:1px solid #000;
+	overflow:hidden;
+	color:#fff;
+	webkit-transition: all 0.1s ease-in-out, width 0.01ms, height 0.01ms;
+	transition: all 0.1s ease-in-out, width 0.01ms, height 0.01ms;
+	transition-property: all, width, height;
+	transition-duration: 0.1s, 0.01ms, 0.01ms;
+	transition-timing-function: ease-in-out, ease, ease;
+	transition-delay: 0s, 0s, 0s;
+	}
+	.CTAMessage{
+    	font-family: 'Benton Sans Book';
+		text-transform: uppercase;
+		text-decoration: none;
+   		color: #fff;
+    	position: absolute;
+    	right: 15px;
+    	bottom: 10px;
+    	display: inherit;
+    	height: 20px;
+    	letter-spacing: .1em;
+    	font-size: 10px;
+    	padding-top: 6px;
+		cursor: pointer;
+	}
+	.CTAMessage:after{
+    	content: ' \2192' !important;
+		margin-left:5px;
+	}
+	.banner:hover{
+	content:"";
+	border: 1px #777 solid;
+	background-color:transparent;
+	-webkit-box-shadow: 0 110px 10px #666;
+	-moz-box-shadow: 0 10px 10px #666;
+	box-shadow: 0 10px 10px #666;
+	-webkit-filter: unset;
+	filter: unset;
+	text-decoration: none;
+	}
+
+	.overlay-effect {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .5s ease;
+	}
+	.banner:hover .overlay-effect {
+	opacity: 1;
+	cursor: pointer;
+	}
+	.callToAction {
+		position: absolute;
+		top: 12px;
+		left: 11px;
+		width: 100%;
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 12px;
+		vertical-align: top;
+}
+
+	.CTAlightbluebubble{
+	background-color: #7FC1D1;
+	background-image: url(https://www.tableau.com/sites/default/files/hero-backgrounds/registration-headers_c_4.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+	.CTAILT{
+	background-color: #F78F28;
+	background-image: url(https://www.tableau.com/sites/default/files/hero-backgrounds/classroom-bg_0.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+
+	}
+
+	.CTAblue{
+	background-color: #F78F28;
+	background-image: url(https://www.tableau.com/sites/default/files/2021-05/skilljar-banner-12_0.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	}
+
+.CTAfunbubbles{
+	background-color: #F78F28;
+	background-image: url(https://www.tableau.com/sites/default/files/hero-backgrounds/ps_day_banner_16.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+	.CTAorange{
+	background-color: #F78F28;
+	background-image: url(https://cdnl.tblsft.com/sites/default/files/hero-backgrounds/elearning-hero-1366x455-1a.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	}
+
+	.CTAlightblue{
+	background-color: #7FC1D1;
+	/*background-image: url(https://cdnl.tblsft.com/sites/default/files/paragraphs/backgrounds/header-background_2880x1080.png);*/
+	background-image: url(https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fv_mstenerson_tableau_com_c4xlt5%2Fpublic%2F1606759025%2Femailbanner-turquoise-gantt.1606759025297.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+	.CTAdarkblue{
+	background-color: #0F1E3C;
+	background-image: url(https://cdns.tblsft.com/sites/default/files/hero-backgrounds/why-1-1366x455_-_1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+	.CTAorangebubblesdarkblue{
+	background-color: #0F1E3C;
+	background-image: url(https://www.tableau.com/sites/default/files/2021-06/skilljar-banner-09.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+	.button_secondary {
+	white-space:nowrap;
+	display: inline-block;
+	margin: .5em 0;
+	padding: 13px 30px;
+	background-color: transparent;
+	border: 2px solid;
+	border-radius: 100px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	line-height: 1;
+	font-size: 11px;
+	font-family: "Benton Sans Medium", Helvetica, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: auto;
+	transition: background-color 0.25s, color 0.35s;
+}
+.button_secondary:hover,
+.button_secondary.focus {
+	background-color: transparent;
+	border: 2px solid;
+	text-decoration: underline;
+}
+.button_secondary:before,
+.button_secondary:after {
+	display: inline-block;
+	text-decoration: underline;
+}
+	/*Course and Series List styles*/
+	.list-view a.course, .search #catalog-content a.coursebox-container {
+	max-width: 30%;
+	min-width: 390px;
+	}
+	.contain{
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+	}
+	.price {
+	font-family: "Benton Sans Book", Helvetica, sans-serif;
+	font-size: 80px;
+	}
+	.notice {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: auto;
+	margin-left: auto;
+	}
+	h1 {
+	line-height: unset;
+	font-size: 2em;
+	}
+	.coursebox-image:before {
+	content: 'MORE';
+	font-family: 'Benton Sans Book';
+	color: #ff6d02;
+	position: fixed;
+	right: 15px;
+	bottom: 0;
+	display: inherit;
+	height: 20px;
+	width: 40px;
+	letter-spacing: .1em;
+	font-size: 10px;
+	padding-top: 6px;
+	}
+	.coursebox-image:after {
+	content: '\2192' !important;
+	font-family: 'Benton Sans Book';
+	color: #ff6d02;
+	position: fixed !important;
+	right: 5px;
+	bottom: 0;
+	top: unset !important;
+	left: unset !important;
+	opacity: unset;
+	display: inherit;
+	height: 20px !important;
+	width: 10px !important;
+	letter-spacing: .1em;
+	font-size: 10px;
+	padding-top: 6px;
+	}
+
+	/*sticks the To the Top nav  on scroll */
+	.sticky {
+	position: fixed;
+	background: #01bce7;
+	z-index: 99;
+	top: 0;
+	width: 100%;
+	left: 0;
+	}
+	.sticky + #catalog-content {
+	padding-top: 60px;
+	}
+	#tothetop {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	}
+	#tothetop:hover {
+	cursor: pointer;
+	}
+	#tothetop:active {
+	background-color: #555;
+	}
+	#tothetop::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #777;
+	}
+	#tothetop.show {
+	opacity: 1;
+	visibility: visible;
+	}
+	</style>
+</div>
+<p>
+<script>
+	//selction menu scrolling
+	function scrollThere(targetElement) {
+	   var scrollPosition=targetElement.parent().scrollTop();
+	   var postionOfTargetElement=$("body").scrollTop() + targetElement.offset().top + (-90);
+	   $('html, body').stop().animate( {
+	       scrollTop: postionOfTargetElement + scrollPosition
+	   }
+	   , 1000, 'swing');
+	}
+
+
+	$(document).ready(function () {
+		/* Banner Randomization */
+		//randomly shuffles the banner elements that are in the banner container
+		$(".banner_container").html($(".banner_container .banner").sort(function(){
+			return Math.random()-0.5;
+		}));
+		//selects all banner elements in the container
+		var bannerElements = $(".banner_container .banner").toArray();
+		//get todays date and remove the time
+		var today = new Date().setHours(0,0,0,0);
+		//loop through each banner element in reverse order
+		for (var i = (bannerElements.length - 1); i >= 0; i--)
+		{
+			//grab the start and end date from the banner element. if there isn't one, set it to today
+			var tmpStart = new Date(Date.parse($(bannerElements[i]).data("start")));
+			var tmpEnd = new Date(Date.parse($(bannerElements[i]).data("end")));
+			if(!(tmpStart instanceof Date && !isNaN(tmpStart)))
+				tmpStart = new Date().setHours(0,0,0,0);
+			if(!(tmpEnd instanceof Date && !isNaN(tmpEnd)))
+				tmpEnd = new Date().setHours(0,0,0,0);
+
+			//if today is not in between the start and end date, remove this banner element from the list
+			if(!((tmpStart <= today) && (today <= tmpEnd)))
+			{
+				$(bannerElements[i]).remove();
+				bannerElements.splice(i, 1);
+			}
+		}
+
+		var bannerCount = bannerElements.length;
+		//if we have 3 or less banner elments, display them all
+		if(bannerCount <= 3)
+		{
+			for (var i = 0; i < bannerElements.length; i++)
+			{
+				$(bannerElements[i]).removeClass("hidden_banner");
+			}
+		}
+		else
+		{
+			//if there are more than 3 banner elements available, randomly select 3 of them and show them
+			var bannerDisplayCount = 0;
+			while(bannerDisplayCount < 3)
+			{
+				var tmp = Math.floor(Math.random() * bannerElements.length);
+				$(bannerElements[tmp]).removeClass("hidden_banner");
+				bannerElements.splice(tmp, 1);
+				bannerDisplayCount++;
+			}
+
+			for (var i = (bannerElements.length - 1); i >= 0; i--)
+			{
+				$(bannerElements[i]).remove();
+			}
+		}
+		/* End Banner Randomization */
+
+	   //Course header
+	   $(".coursebox-container[data-tags*='course']").first().addClass('099');
+	   var nonLPDisplay='<div class="nonLPDisplay"style="width:100%;"><div class="welcome"><br/><br/><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" id="CourseScroll">Courses</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Interactive courses designed to help you learn how to use Tableau, regardless of your skill level. Hands-on activities and knowledge checks ensure you retain what you learn. <\/p><\/div><div class="hola"><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" id="CourseScroll">Cursos</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Cursos interactivos diseñados para ayudarlo a aprender a usar Tableau, independientemente de su nivel de habilidad. Las actividades prácticas y los controles de conocimiento aseguran que retiene lo que aprende.</p></div><div class="konnichiwa"><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" id="CourseScroll">コース</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">スキルレベルに関係なく、Tableauの使い方を学習できるように設計されたインタラクティブコース。実践的なアクティビティと知識チェックにより、学んだことを確実に維持できます</p></div><div class="nihao"><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" id="CourseScroll">培训班</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">无论您的技能水平如何，交互式课程都旨在帮助您学习如何使用Tableau。动手活动和知识检查可确保您保留所学内容。</p></div></div>';
+
+	   $(".099").before(nonLPDisplay);
+
+
+	   //LP header
+	   $(".sj-course-series[data-tags*='learning-path']").first().addClass('098');
+	   var LPDisplay='<div class="LPDisplay" style="width:100%;"><div class="welcome"><br/><br/><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" id="LPScroll">Learning Paths</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Get the Tableau skills you need. Explore the learning paths below to find the right path for you. Complete a learning path, take the skills assessment, and earn your Skill Badges today.</p></div></div>';
+	   $(".098").before(LPDisplay);
+
+   //Highlight header visible to all
+	   $(".coursebox-container[data-tags*='highlight']").first().addClass('097');
+   var HIGHLIGHTDisplay='<div class="HIGHLIGHTDisplay"style="width:100%;"><div class="welcome"><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" >Data Literacy for All</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Learn foundational analysis concepts to help you gain confidence when working with data.</p></div></div>';
+
+   $(".097").before(HIGHLIGHTDisplay);
+
+	   //Pilot header only visible to select groups
+	   $(".coursebox-container[data-tags*='pilot']").first().addClass('096');
+	   var PILOTDisplay='<div class="PILOTDisplay"style="width:100%;"><div class="welcome"><br/><br/><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" >Tableau Desktop Specialist Exam Readiness</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Everything you need to get ready for the exam. </p></div></div>';
+
+	   $(".096").before(PILOTDisplay);
+
+   $(".coursebox-container[data-tags*='daer']").first().addClass('094');
+	   var DAERDisplay='<div class="DAERDisplay"style="width:100%;"><div class="welcome"><br/><br/><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" >Tableau Certified Data Analyst Exam Readiness</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  ">Everything you need to get ready for the exam.</p></div></div>';
+
+	   $(".094").before(DAERDisplay);
+
+if(skilljarUserStudentGroups != null)
+{
+var siteAdminStudent = false;
+for(var i = 0; i < skilljarUserStudentGroups.length; i++)
+{
+if(skilljarUserStudentGroups[i]["id"] == "3tf36r0mt6bxn" || skilljarUserStudentGroups[i]["id"] == "3nsgflm2td3c5")
+{
+siteAdminStudent = true;
+i=skilljarUserStudentGroups.length;
+}
+}
+if(siteAdminStudent)
+{
+	   $(".coursebox-container[data-catalog-page*='site-admin']").first().addClass('095');
+	   var SiteAdminDisplay='<div class="SiteAdminDisplay"style="width:100%;"><div class="welcome"><br/><br/><h1 style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px; font-size:30px!important;" >Tableau Site Administration</h1><p style=" white-space: pre-line; display: block; width:100%;justify-content:center; text-align:center; padding-top:10px;  "></p></div></div>';
+
+	   $(".095").before(SiteAdminDisplay);
+}
+}
+
+	   //makes sort menu sticky
+	   $('.sj-page-catalog').scroll(function () {
+	       if ($(this).scrollTop() >=290) {
+	           $('#sortMenu').addClass("sticky");
+	       }
+	       else {
+	           $('#sortMenu').removeClass("sticky");
+	       }
+	   }
+	   );
+
+
+	 $('.sj-page-catalog').scroll(function() {
+	   if ($(this).scrollTop() > 300) {
+	     $('#tothetop').addClass('show');
+	   } else {
+	     $('#tothetop').removeClass('show');
+	   }
+	 });
+
+	 $('#tothetop').on('click', function(e) {
+	   e.preventDefault();
+	   $('html, body').animate({scrollTop:0}, '300');
+	 });
+
+	 	});
+
+
+	//hide/show headers on search
+	$('#catalogSearchInput').focus(function () {
+	  $('.LPDisplay').css({
+	       'display' : 'none'
+	   });
+	   $('.nonLPDisplay').css({
+	       'display' : 'none'
+	   });
+	   $('.PILOTDisplay').css({
+	       'display' : 'none'
+	   });
+	   $('.HILIGHTDisplay').css({
+	       'display' : 'none'
+	   });
+	});
+	$('#catalogSearchInput').focusout(function () {
+	   if ($('.list-view').hasClass('search')) {
+	       $('.PILOTDisplay').css({
+	       'display' : 'none'
+	   });
+	  $('.HIGHLIGHTDisplay').css({
+	       'display' : 'none'
+	   });
+	  $('.LPDisplay').css({
+	       'display' : 'none'
+	   });
+	   $('.nonLPDisplay').css({
+	       'display' : 'none'
+	   });
+	   }else{
+	       setTimeout(function(){
+	       $(".coursebox-container[data-catalog-page*='data-literacy']").filter(":visible").first().addClass('096');
+	       $(".coursebox-container[data-course*='course-orientation']").filter(":visible").first().addClass('097');
+	       $(".sj-course-series[data-tags*='learning-path']:not(.sj-course-series[data-tags*='pilot'])").filter(":visible").first().addClass('098');
+	       $(".coursebox-container[data-tags*='course']").filter(":visible").first().addClass('099');
+
+                           $(".096").delay(200).before($('.HIGHLIGHTDisplay'));
+                     $(".097").delay(200).before($('.PILOTDisplay'));
+	       $(".098").delay(200).before($('.LPDisplay'));
+	       $(".099").delay(200).before($('.nonLPDisplay'));
+	   $('.LPDisplay').css({
+	       'display' : 'block'
+	   });
+                 $('.IGHLIGHTDisplay').css({
+	       'display' : 'block'
+	   });
+                 $('.PILOTDisplay').css({
+	       'display' : 'block'
+	   });
+	   $('.nonLPDisplay').css({
+	       'display' : 'block'
+	   });
+	   }, 200);}
+	});
+
+
+	$('#left-nav-button').click(function(){
+	   $('.LPDisplay').css({
+	       'display' : 'none'
+	   });
+	   $('.nonLPDisplay').css({
+	       'display' : 'none'
+	   });
+
+	});
+
+
+	//Navigation buttons, All Content, Learning Paths, Courses
+	//adds active class to buttons on click
+	$(document).on('click', 'ul li', function() {
+	   $(this).addClass('active').siblings().removeClass('active')
+	}
+	);
+	//All Content Button
+	$(document).on('click', '#allBtn', function(e) {
+	  e.preventDefault();
+	   scrollThere($('#catalog-courses'));
+	   $('.course').css( {
+	       'opacity': '0.2'
+	   }
+	   );
+	   $('.course').animate( {
+	       opacity: 1.0
+	   }
+	   );
+	   //return false;
+	}
+
+	);
+	//Learning Path Button
+	$(document).on('click', '#LPBtn', function(e) {
+	   e.preventDefault();
+	   scrollThere($('#LPScroll'));
+	   $('.course.sj-course-series').css( {
+	       'opacity': '.2'
+	   }
+	   );
+	   $('.course.sj-course-series[data-tags*="learning-path"]').animate( {
+	       opacity: 1.0
+	   }
+	   );
+	   $('.course[data-tags*="course"]').animate( {
+	       opacity: .2
+	   }
+	   );
+	}
+
+	);
+	//Course Button
+	$(document).on('click', '#courseBtn', function(e) {
+	   e.preventDefault();
+	   scrollThere($('#CourseScroll'));
+	   $('.course[data-tags*="course"]').css( {
+	       'opacity': '.2'
+	   }
+	   );
+	   $('.course[data-tags*="course"]').animate( {
+	       opacity: 1.0
+	   }
+	   );
+	   $('.course.sj-course-series[data-tags*="learning-path"]').animate( {
+	       opacity: .2
+	   }
+	   );
+	}
+
+	);
+	</script>
+</p>
+<!-- after scrolling, menu to bring user back to top-->
+<div><a id="tothetop"></a></div>
+<!--Top Header-->
+<div class="contain welcome">
+  <div class="hero_intro">
+    <div class="hero">
+      <h1 style="white-space: pre-line; display: block; width: 100%; justify-content: center; text-align: center; font-size: 30px!important; font-weight: bold;">Tableau eLearning for Creator</h1>
+      <!-- Begin Course Nav -->
+      <ul id="sortMenu">
+        <li id="allBtn" class=" welcome active" title="View All Content">
+          <div class="button_secondary button">All Content</div>
+        </li>
+        <li id="LPBtn" class="welcome" title="View Role-Based Learning Paths">
+          <div class="button_secondary button">Learning Paths</div>
+        </li>
+        <li id="courseBtn" class="welcome" title="View Software Based Courses">
+          <div class="button_secondary button">Courses</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Begin 3-up banner-->
+  <div class="hero_tabs">
+    <div class="hero">
+      <div class="three-up banner_container"><!-- Banner Ad Start -->
+        <div class="column banner CTAlightblue hidden_banner" data-start="11/28/2020" data-end="03/01/2022"><a href="https://tableauassessment.azurewebsites.net/?utm_source=Skilljar&amp;utm_medium=banner&amp;utm_campaign=TLC%20Quiz" target="_blank" rel="noopener">
+          <div class="overlay-effect">&nbsp;</div>
+          </a>
+          <div class="callToAction">Find Your Learning Path</div>
+          <p style="text-align: left;">Answer a few quick questions and we'll match you with the right learning path.</p>
+          <div class="CTAMessage">Find your Path</div>
+        </div>
+        <!-- Banner Ad End --> <!-- Banner Ad Start -->
+        <div class="column banner CTAlightbluebubble hidden_banner" data-start="11/28/2020" data-end="01/31/2022"><a href="https://www.tableau.com/learn/training/specialist-certification-prep?utm_source=Skilljar&amp;utm_medium=banner" target="_blank" rel="noopener">
+          <div class="overlay-effect">&nbsp;</div>
+          </a>
+          <div class="callToAction">Tableau Exam Readiness Courses</div>
+          <p style="text-align: left;">Get Tableau Certified quicker than ever.</p>
+          <div class="CTAMessage">Check It Out</div>
+        </div>
+        <!-- Banner Ad End --> <!-- Banner Ad Start -->
+        <div class="column banner CTAorange hidden_banner" data-start="02/24/2021" data-end="01/31/2023"><a href="https://www.tableau.com/tableau-training-pass" target="_blank" rel="noopener">
+          <div class="overlay-effect">&nbsp;</div>
+          </a>
+          <div class="callToAction">Tableau Training Pass</div>
+          <p style="text-align: left;">Amplify your Tableau training with 90 days of unlimited live instructor-led courses.</p>
+          <div class="CTAMessage">Get your pass</div>
+        </div>
+        <!-- Banner Ad End --> <!-- Banner Ad Start -->
+        <div class="column banner CTAdarkblue hidden_banner" data-start="12/15/2020" data-end="02/01/2022"><a href="https://elearning.tableau.com/series/new-feature-spotlight?utm_source=Skilljar&amp;utm_medium=banner" target="_blank" rel="noopener">
+          <div class="overlay-effect">&nbsp;</div>
+          </a>
+          <div class="callToAction">New Feature Spotlight</div>
+          <p>Learn the latest for Tableau Desktop with the New Feature Spotlight. Updated for version 2021.1.</p>
+          <div class="CTAMessage">Start Learning</div>
+        </div>
+        <!-- Banner Ad End --> <!-- Banner Ad Start -->
+        <div class="column banner CTAILT" data-start="02/15/2021" data-end="05/31/2022"><a href="https://elearning.tableau.com/page/site-admin?utm_source=Skilljar&amp;utm_medium=banner" target="_blank" rel="noopener">
+          <div class="overlay-effect">&nbsp;</div>
+          </a>
+          <div class="callToAction">Tableau Site Administration</div>
+          <p>Learn successful site admin skills with expert-led live sessions, labs, and self-paced training.</p>
+          <div class="CTAMessage">Learn More</div>
+          <!-- Banner Ad End --> <!-- Banner Ad Start -->
+          <div class="column banner CTAdarkblue hidden_banner" data-start="05/05/2022" data-end="08/05/2022"><a href="https://www.surveymonkey.com/r/Tableauelearning1?utm_source=Skilljar&amp;utm_medium=banner" target="_blank" rel="noopener">
+            <div class="overlay-effect">&nbsp;</div>
+            </a>
+            <div class="callToAction">Customer Satisfaction Survey</div>
+            <p>Enjoying Tableau eLearning? We'd love your feedback. Take a few minutes to complete our survey.</p>
+            <div class="CTAMessage">Take survey</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
